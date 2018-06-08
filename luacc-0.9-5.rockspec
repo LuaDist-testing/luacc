@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "luacc"
-version = "0.9-4"
+version = "0.9-5"
 -- LuaDist source
 source = {
-  tag = "0.9-4",
+  tag = "0.9-5",
   url = "git://github.com/LuaDist-testing/luacc.git"
 }
 -- Original source
@@ -25,7 +25,10 @@ dependencies = {
 }
 build = {
    type = "builtin",
-   modules = {
-      luacc = "bin/luacc.lua",
+   modules = {},
+   install = {
+      bin = {
+         luacc = "bin/luacc.lua",
+      },
    },
 }
