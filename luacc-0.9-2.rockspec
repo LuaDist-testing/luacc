@@ -1,9 +1,17 @@
-package = "LuaCC"
-version = "0.9-5"
+-- This file was automatically generated for the LuaDist project.
+
+package = "luacc"
+version = "0.9-2"
+-- LuaDist source
 source = {
-   url = "git://github.com/mihacooper/luacc",
-   tag = version
+  tag = "0.9-2",
+  url = "git://github.com/LuaDist-testing/luacc.git"
 }
+-- Original source
+-- source = {
+--    url = "git://github.com/mihacooper/luacc",
+--    tag = version
+-- }
 description = {
    summary = "Command line tool to combine Lua source files.",
    detailed = [[
@@ -17,10 +25,7 @@ dependencies = {
 }
 build = {
    type = "builtin",
-   modules = {},
-   install = {
-      bin = {
-         luacc = "bin/luacc.lua",
-      },
+   modules = {
+      luacc = "bin/luacc.lua",
    },
 }
