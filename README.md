@@ -20,7 +20,7 @@ luacc -o <output> [-i <include>] [-p <position>] <main> [modules] ...
         *Example*: `luacc ... -p 10`
       * **"..."** - string value determines the position of generated code  
         *Example*: `luacc ... -p "LuaCC code block"`  
-        *Note*: LuaCC will looking for *"#LuaCC code block"* comment in main file and will replace it with generated code  
+        *Note*: LuaCC will looking for *"--LuaCC code block"* comment in main file and will replace it with generated code  
         *Note*: LuaCC searches till **first match**, LuaCC matches only the **whole string** 
   * **\<main\>** - the main file of application which will copied to result file 'as is'  
     *Example*: `luacc ... path.to.main.file`  
@@ -76,7 +76,7 @@ return { name = "My name is Module2" }
 ---
 To combine the files use the command below:
 ```bash
-$ lua luacc.lua -o myapp.lua -i /path/to/project -i /path/to/external/modules main module1 module2 
+$ lua luacc.lua -o myapp.lua -i /path/to/project -i /path/to/external/modules main subfolder.module1 module2 
 ```
 
 And now just execute the result script:
